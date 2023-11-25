@@ -44,6 +44,7 @@ section {
   }
 
   .wall-of-text {
+    color: #535bf2;
     margin-top: 1300px; /* Adjust margin for smaller screens */
     padding: 10px; /* Add padding for better readability on small screens */
   }

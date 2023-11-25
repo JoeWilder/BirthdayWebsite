@@ -49,7 +49,7 @@ onUnmounted(() => {
   right: 0;
   background-color: var(--titlebar-background);
   border-bottom: 1px solid var(--titlebar-divider);
-  color: var(--sidebar-icons);
+  color: #1E293BFF;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,12 +76,12 @@ onUnmounted(() => {
 
 .title {
   font-size: 1.25rem;
-  color: var(--title-text);
+  color: #1E293BFF;
   margin-right: auto;
 }
 
 .menu-icon {
-  color: var(--title-text);
+  color: #1E293BFF;
   margin-left: 1rem;
   cursor: pointer;
   padding: 4px;
@@ -99,6 +99,7 @@ onUnmounted(() => {
   position: absolute;
   top: 60px;
   right: 30px;
+  color: #535bf2;
   background-color: var(--titlebar-background);
   border: 1px solid var(--titlebar-divider);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
