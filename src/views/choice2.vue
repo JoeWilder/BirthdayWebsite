@@ -37,4 +37,16 @@ section {
   margin-top: 20px; /* Adjust the margin as needed */
 }
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  section {
+    margin-top: 200px; /* Adjust margin for smaller screens */
+  }
+
+  .wall-of-text {
+    margin-top: 1300px; /* Adjust margin for smaller screens */
+    padding: 10px; /* Add padding for better readability on small screens */
+  }
+}
+
 </style>
