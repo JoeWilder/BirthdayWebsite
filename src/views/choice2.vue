@@ -17,7 +17,7 @@
   </p>
 
 
-  <h2>WRONG CHOICE PICK ANOTHER BUTTON</h2>
+  <h2 class="wrong-choice">WRONG CHOICE PICK ANOTHER BUTTON</h2>
   </section>
 </template>
 
@@ -34,6 +34,7 @@ section {
 }
 
 .wall-of-text {
+  color: #535bf2;
   margin-top: 20px; /* Adjust the margin as needed */
 }
 
