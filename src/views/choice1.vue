@@ -26,10 +26,12 @@ const handleButtonClicked = () => {
 };
 
 onMounted(() => {
+  document.documentElement.style.overflow = 'hidden';  // Apply style to html element
   document.body.classList.add('no-scroll');
 });
 
 onBeforeUnmount(() => {
+  document.documentElement.style.overflow = '';  // Remove style from html element
   document.body.classList.remove('no-scroll');
 });
 </script>
@@ -39,33 +41,41 @@ onBeforeUnmount(() => {
   overflow: hidden;
 }
 
+body {
+  margin: 0; /* Remove default body margin */
+}
+
+html {
+  height: 100%;
+  overflow: hidden;  /* Prevent scrolling on the entire page */
+}
+
 .christmas-dove-trip {
   opacity: 0;
   text-align: center;
   color: #fff;
-  background-color: #87CEEB; /* Light Blue background */
+  background-color: #4b0141;
   padding: 20px;
   border-radius: 10px;
-  transition: opacity 1s; /* Add a transition for a smoother opacity change */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 1; /* Ensure the text is below the title bar */
+  z-index: 1;
+  height: 100vh;
 }
 
 .overlay-text {
   opacity: 0;
   color: #c90101;
   text-align: center;
-  font-size: 2em; /* Increase font size for a larger text */
-  margin-top: 20px; /* Add margin to separate text from image */
+  font-size: 2em;
 }
 
 .christmas-dove-img {
-  width: 100%; /* Make the image take up the full width of the container */
-  max-height: 70vh; /* Set maximum height to 70% of viewport height */
+  width: 100%;
+  max-height: 70vh;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -79,6 +89,10 @@ onBeforeUnmount(() => {
 }
 
 button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
@@ -87,13 +101,13 @@ button {
   color: #ffffff;
   border: 1px solid #b96a29;
   border-radius: 5px;
-  margin-top: 20px; /* Add spacing between button and dove image */
   transition: background-color 0.3s ease;
+  z-index: 2; /* Ensure the button is above other elements */
 }
 
 @media (max-width: 768px) {
   .christmas-dove-img {
-    max-height: 50vh; /* Adjust max height for smaller screens */
+    max-height: 50vh;
   }
 }
 </style>
