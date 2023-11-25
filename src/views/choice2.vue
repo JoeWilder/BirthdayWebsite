@@ -38,6 +38,10 @@ section {
   margin-top: 20px; /* Adjust the margin as needed */
 }
 
+.wrong-choice {
+  color: #c90101;
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   section {
@@ -48,6 +52,10 @@ section {
     color: #535bf2;
     margin-top: 1300px; /* Adjust margin for smaller screens */
     padding: 10px; /* Add padding for better readability on small screens */
+  }
+
+  .wrong-choice {
+    color: #c90101;
   }
 }
 
